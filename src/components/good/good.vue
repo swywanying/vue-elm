@@ -88,7 +88,7 @@
 <script>
 // var css = require('./rating.vue')
 export default {
-  name: 'HelloWorld',
+  name: 'good',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

@@ -7,12 +7,7 @@
 
 <script>
 export default {
-  name: 'seller',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+  name: 'seller'
 }
 </script>
 
