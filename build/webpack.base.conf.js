@@ -34,6 +34,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
+      'src': path.resolve(__dirname,'../src'),
+      'assets': path.resolve(__dirname,'../src/assets'),
+      'components': path.resolve(__dirname,'../src/components'),
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
@@ -88,6 +91,9 @@ module.exports = {
   plugins: [
 
   ],
+  // vue: {
+  //   loaders: utils.cssLoaders()
+  // },
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

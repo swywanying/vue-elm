@@ -1,38 +1,56 @@
 <template>
   <div class="header">
-    <div class="info">
-      <img :src={logo} alt="">
-      <div class="sell_info">
-        <div class="name">
-          <img :src={sign1} alt="">{{seller.name}}</div>
-        <div class="type">{seller.type}}</div>
-        <div class="preferential">
-          <img :src={sign2} alt="">
-          <span>{seller.preferential}}</span>
-          <div class="p_type"><span>{{p_type}}</span><img :src={sign3} alt=""></div>
-        </div>
-      </div>
-    </div>
-    <div class="notice">
-      <img :src={sign4} alt="">
-      <span>{{notice}}</span>
-      <img :src={sign3} alt="">
+   <div class="content-wrapper">
+     <div class="avatar">
+       <img :src="seller.avator" alt="">
+     </div>
+     <div class="content">
+       <div class="title">
+         <span class="brand"></span>
+         <span class="name">{{seller.name}}</span>
+       </div>
+       <div class="description">
+         {{seller.description}}/{{seller.deliveryTime}}分钟送达
+       </div>
+       <div v-if="seller.supports" class="supports">
+         <span class="icon"></span>
+         <span class="text">{{seller.supports[0].description}}</span>
+       </div>
+     </div>
+   </div>
+    <div class="bulletin-wrapper">
+
     </div>
   </div>
 </template>
 
-<script>
+<script type="text/ecmascript-6">
 export default{
-  name: 'header',
-  data:{
-    seller:{
-
+  props: {
+    seller: {
+      type: Object
     }
-  },
+  }
 
 }
 </script>
 
-<style scoped>
-
+<style lang = "stylus" rel="stylesheet/stylus">
+  .header{
+    color: #ffffff
+    background: #000000
+    .content-wrapper{
+      padding: 24px 12px 18px 24px
+    }
+    .avator{
+      display:inline-block
+    }
+    .content{
+      display:inline-block
+    }
+  }
+  .avator img{
+    width:64px;
+    height:64px;
+  }
 </style>
